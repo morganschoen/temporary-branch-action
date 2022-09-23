@@ -4,6 +4,9 @@ BASE_BRANCH=$INPUT_BASE
 TEMP_BRANCH="temp-$RANDOM"
 SHOULD_PUSH=$INPUT_PUSH
 
+# See https://github.com/actions/checkout/issues/766
+git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
 if [ ! -z "$BASE_BRANCH" ]; then
   echo "Creating temporary branch from $BASE_BRANCH"
 
