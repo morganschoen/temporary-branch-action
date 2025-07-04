@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 BASE_BRANCH=$INPUT_BASE
-TEMP_BRANCH="story/pe-11592_temp-$RANDOM"
+TEMP_BRANCH="temp-$RANDOM"
 SHOULD_PUSH=$INPUT_PUSH
 
 # See https://github.com/actions/checkout/issues/766
